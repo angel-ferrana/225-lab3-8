@@ -36,7 +36,7 @@ pipeline {
 
                     // Apply all required Kubernetes manifests in correct order
                     
-                    // Secret is now created manually in Rancher per SECRETS.md instructions
+                    // mongo-secret.yaml applied manually in Rancher as per SECRETS.md, file removed from repo
                     // sh 'kubectl apply -f mongo-secret.yaml'
                     sh 'kubectl apply -f mongo.yaml'              // MongoDB StatefulSet or Deployment
                     sh 'kubectl apply -f mongo-configmap.yaml'    // ConfigMap for Mongo initialization parameters
